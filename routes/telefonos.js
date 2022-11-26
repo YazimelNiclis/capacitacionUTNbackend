@@ -1,4 +1,4 @@
-const express = require("express");
+/* const express = require("express");
 const router = express.Router();
 const {
   list,
@@ -29,6 +29,6 @@ router.post(
   runValidation,
   verifyToken,
   addTelefono
-);
+); */
 
 module.exports = router;

@@ -39,8 +39,8 @@ app.get("/error", (req, res) => {
   res.status(400).json({ error: "Recurso not found" });
 });
 
-app.use("/api", telefonosRoutes);
-app.use("/api", userRoutes);
+/* app.use("/api", telefonosRoutes);
+app.use("/api", userRoutes); */
 
 if (process.env.NODE_ENV === "production") {
   const path = require("path");
