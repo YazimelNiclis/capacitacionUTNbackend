@@ -42,8 +42,15 @@ app.get("/error", (req, res) => {
 app.use("/api", telefonosRoutes);
 app.use("/api", userRoutes);
 
+if (process.env.NODE_ENV === "production") {
+  const path = require("path");
+  app.use(express.static(path.resolve(__dirname, "client", "build")));
+  res.sendFile(path.resolve(__dirname, "client", "build", "index.html"));
+}
 //EJECUCION DEL SERVIDOR
 const port = process.env.PORT || 8000;
 app.listen(port, () => {
   console.log(`Server is running on port ${port}`);
 });
+
+module.exports = app;
