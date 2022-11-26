@@ -1,4 +1,4 @@
-const knex = require("../config/knexfile");
+/* const knex = require("../config/knexfile");
 const bcrypt = require("bcrypt");
 const jwt = require("jsonwebtoken");
 const formidable = require("formidable");
@@ -12,8 +12,8 @@ exports.listUser = (req, res) => {
     .catch((error) => {
       res.status(400).json({ error: error.message });
     });
-};
-
+}; */
+/* 
 exports.register = (req, res) => {
   let form = new formidable.IncomingForm();
   form.keepExtensions = true;
@@ -80,8 +80,8 @@ exports.register = (req, res) => {
       });
   });
 };
-
-exports.login = async (req, res) => {
+ */
+/* exports.login = async (req, res) => {
   let form = new formidable.IncomingForm();
   form.keepExtensions = true;
   form.parse(req, (err, fields, files) => {
@@ -91,11 +91,11 @@ exports.login = async (req, res) => {
       });
     }
     const { email, password } = fields;
-
-    /* res
+ */
+/* res
       .status(400)
       .json({ file: files.file, email: email, password: password }); */
-    if (!email || !email.length) {
+/* if (!email || !email.length) {
       return res.status(400).json({ error: "El mail es obligatorio" });
     }
     if (!password || password.length < 8) {
@@ -103,11 +103,11 @@ exports.login = async (req, res) => {
         .status(400)
         .json({ error: "La contraseña debe tener un mínimo de 8 caracteres" });
     }
+ */
+//file
 
-    //file
-
-    //SELECT
-    knex("usuarios")
+//SELECT
+/*   knex("usuarios")
       .where({ email: email })
       .then(async (resultado) => {
         if (!resultado.length) {
@@ -174,8 +174,8 @@ exports.login = async (req, res) => {
         res.status(400).json({ error: error.message });
       });
   });
-};
-
+}; */
+/* 
 exports.photo = (req, res) => {
   const userId = req.params.id;
   knex("usuarios")
@@ -191,4 +191,4 @@ exports.photo = (req, res) => {
 
 exports.info = (req, res) => {
   res.json(req.user);
-};
+}; */

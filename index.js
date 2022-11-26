@@ -11,9 +11,9 @@ const cors = require("cors");
 //Nos permite acceder al archivo .env donde estarán las variables de entorno.
 require("dotenv").config();
 
-const telefonosRoutes = require("./routes/telefonos");
+/* const telefonosRoutes = require("./routes/telefonos");
 
-const userRoutes = require("./routes/user");
+const userRoutes = require("./routes/user"); */
 //ENDPOINT -  localhost:8000/usuarios    GET
 // REQUEST - localhost:8000/usuarios    POST     body: {usuario: nombreUsuario, mail: mail@uysuari.com}
 // MIDDLEWARE - Man In The Middle

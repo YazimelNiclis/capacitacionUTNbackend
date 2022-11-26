@@ -17,4 +17,5 @@ router.post("/user/login", login);
 router.post("/user/register", register);
 router.get("/user/photo/:id", photo); */
 
-module.exports = router;
+/* module.exports = router;
+ */

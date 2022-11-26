@@ -1,6 +1,6 @@
-const { json } = require("body-parser");
+/* const { json } = require("body-parser");
 const telefonos = require("../agenda");
-const knex = require("../config/knexfile");
+const knex = require("../config/knexfile"); */
 
 /* //knex('tabla').condiciones.campos
 exports.list = (req, res) => {
@@ -14,7 +14,7 @@ exports.list = (req, res) => {
 }; */
 
 //knex('tabla').condiciones.campos
-exports.list = (req, res) => {
+/* exports.list = (req, res) => {
   knex("clientes").then((clientes) => {
     res.json({ listaClientes: clientes, datosUsuario: req.user });
   });
@@ -77,12 +77,12 @@ exports.addTelefono = (req, res) => {
     })
     .catch((error) => {
       res.status(400).json({ error: error.message });
-    });
+    }); */
 
-  //TRANSACCION A LA BASE DE DATOS
-};
+//TRANSACCION A LA BASE DE DATOS
+/* }; */
 
-exports.probandoJoin = (req, res) => {
+/* exports.probandoJoin = (req, res) => {
   const idCliente = req.params.id;
   knex("ordenes")
     .innerJoin("clientes", "ordenes.clienteid", "clientes.clienteid")
@@ -95,3 +95,4 @@ exports.probandoJoin = (req, res) => {
       res.status(400).json({ error: error.message });
     });
 };
+ */

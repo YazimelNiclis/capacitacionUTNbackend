@@ -1,4 +1,4 @@
-const knex = require("knex")({
+/* const knex = require("knex")({
   client: "pg",
   connection: {
     host: process.env.DB_HOST,
@@ -9,4 +9,4 @@ const knex = require("knex")({
   },
 });
 
-module.exports = knex;
+module.exports = knex; */
