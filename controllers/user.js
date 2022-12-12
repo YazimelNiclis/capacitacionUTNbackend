@@ -1,5 +1,5 @@
 const knex = require("../config/knexfile");
-const bcrypt = require("bcrypt");
+const bcrypt = require("bcryptjs");
 const jwt = require("jsonwebtoken");
 const formidable = require("formidable");
 const fs = require("fs");
