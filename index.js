@@ -12,8 +12,8 @@ const cors = require("cors");
 require("dotenv").config();
 
 /* const telefonosRoutes = require("./routes/telefonos");
-
-const userRoutes = require("./routes/user"); */
+ */
+const userRoutes = require("./routes/user");
 //ENDPOINT -  localhost:8000/usuarios    GET
 // REQUEST - localhost:8000/usuarios    POST     body: {usuario: nombreUsuario, mail: mail@uysuari.com}
 // MIDDLEWARE - Man In The Middle
@@ -37,8 +37,8 @@ app.get("/error", (req, res) => {
   res.status(400).json({ error: "Recurso not found" });
 });
 
-/* app.use("/api", telefonosRoutes);
-app.use("/api", userRoutes); */
+/* app.use("/api", telefonosRoutes); */
+app.use("/api", userRoutes);
 
 //EJECUCION DEL SERVIDOR
 const port = process.env.PORT || 8000;
