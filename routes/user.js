@@ -13,8 +13,8 @@ const { userValidator, loginValidator } = require("../validators/user");
 
 router.get("/user/list", verifyToken, listUser);
 router.get("/user/info", verifyToken, info);
-router.post("/user/login", login);
-router.post("/user/register", register);
+router.post("/user/login", loginValidator, runValidation, login);
+router.post("/user/register", verifyToken, register);
 router.get("/user/photo/:id", photo);
 
 module.exports = router;

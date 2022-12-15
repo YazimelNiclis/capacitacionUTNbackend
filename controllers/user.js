@@ -82,7 +82,7 @@ exports.listUser = (req, res) => {
 }; */
 
 exports.register = async (req, res) => {
-  const { email, password, nombre, id } = req.body;
+  const { email, password, nombre } = req.body;
 
   const salt = await bcrypt.genSalt(10);
   const passwordEncrypt = await bcrypt.hash(password, salt);
@@ -95,7 +95,6 @@ exports.register = async (req, res) => {
       }
       knex("usuarios")
         .insert({
-          id: id,
           email: email,
           password: passwordEncrypt,
           nombre: nombre,
